@@ -1,0 +1,11 @@
+---
+- name: configur different s/w's applications
+  hosts: all
+  tasks:
+    - name: installing and uninstalling s/w's
+      apt:
+        name: "{{a}}"
+        state: "{{b}}"
+        update_cache: "{{c}}"
+...
+

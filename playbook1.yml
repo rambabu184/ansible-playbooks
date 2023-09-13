@@ -1,0 +1,13 @@
+---
+- name: create user in all manage noads
+  hosts: all
+  tasks: 
+    - name: user creation
+      user:
+        name: ram
+        password: moksha
+        uid: 5656
+        home: /home/ubuntu/ram
+        comment: "regular user"  
+        shell: /bin/bash
+...             

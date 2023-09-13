@@ -1,0 +1,17 @@
+---
+- name: fetching files from managenode1 to controller
+  hosts: 172.31.2.155
+  tasks:
+    - name: fetch files from server2
+      fetch:
+        src: /tmp/file200
+        dest: /tmp
+- name: copy files from controller to server1
+  hosts: 172.31.8.155
+  tasks:
+    - name: copy file200 to server2
+      copy: 
+        src: /tmp/172.31.2.155
+        dest: /tmp
+
+...          

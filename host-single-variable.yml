@@ -1,0 +1,13 @@
+---
+- name: implementing single host scope variable
+  hosts: 54.89.151.2
+  tasks:
+    - name : user creation
+      user:
+        name: "{{a}}"
+        password: "{{b}}"
+        uid: "{{c}}"
+        comment: "{{d}}"
+        home: "{{e}}"
+        shell: "{{f}}"
+...          
